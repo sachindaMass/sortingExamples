@@ -1,5 +1,6 @@
 package com.example.sortingexamples;
 
+import com.example.sortingexamples.binarySearchExample.BinarySearchExample;
 import com.example.sortingexamples.bubbleSortExample.BubbleSortExample;
 import com.example.sortingexamples.insertionSortExample.InsertionSortExample;
 import com.example.sortingexamples.mergerSortExample.MergerSortExample;
@@ -7,6 +8,7 @@ import com.example.sortingexamples.quickSortExample.QuickSortExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
 import java.util.Random;
 
 @SpringBootApplication
@@ -65,6 +67,14 @@ public class SortingExamplesApplication {
 
         System.out.println("\nAfter the merge Sort: ");
         mergerSortExample.printArray(numbers);
+
+//        ----------------------------------------------------------------------------------------
+
+        int[] ints = {1, 2, 4, 5, 7, 9, 11};
+        BinarySearchExample binarySearchExample = new BinarySearchExample();
+        int binarySearch = binarySearchExample.binarySearch(ints, 9);
+        System.out.println("binary Index:" + binarySearch);
+        System.out.println(Arrays.binarySearch(ints, 9)); // one line to find BinarySearch
 
 //        ----------------------------------------------------------------------------------------
     }
