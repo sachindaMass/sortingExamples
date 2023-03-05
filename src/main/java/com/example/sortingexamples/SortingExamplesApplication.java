@@ -1,5 +1,6 @@
 package com.example.sortingexamples;
 
+import com.example.sortingexamples.insertionSortExample.InsertionSortExample;
 import com.example.sortingexamples.quickSortExample.QuickSortExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,6 +30,19 @@ public class SortingExamplesApplication {
 
         System.out.println("\nAfter: ");
         quickSortExample.printArray(numbers);
+
+//        --------------------------------------------------------------------------------------
+        InsertionSortExample insertionSortExample = new InsertionSortExample();
+
+        System.out.println("Before the insertion: ");
+        insertionSortExample.printArray(numbers);
+
+        insertionSortExample.InsertionSortExample(numbers);
+
+        System.out.println("\nAfter the insertion: ");
+        insertionSortExample.printArray(numbers);
+
+//        ----------------------------------------------------------------------------------------
     }
 
 }
