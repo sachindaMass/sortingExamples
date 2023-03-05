@@ -1,5 +1,6 @@
 package com.example.sortingexamples;
 
+import com.example.sortingexamples.bubbleSortExample.BubbleSortExample;
 import com.example.sortingexamples.insertionSortExample.InsertionSortExample;
 import com.example.sortingexamples.quickSortExample.QuickSortExample;
 import org.springframework.boot.SpringApplication;
@@ -31,7 +32,7 @@ public class SortingExamplesApplication {
         System.out.println("\nAfter: ");
         quickSortExample.printArray(numbers);
 
-//        --------------------------------------------------------------------------------------
+//      ----------------------------------------------------------------------------------------
         InsertionSortExample insertionSortExample = new InsertionSortExample();
 
         System.out.println("Before the insertion: ");
@@ -42,7 +43,19 @@ public class SortingExamplesApplication {
         System.out.println("\nAfter the insertion: ");
         insertionSortExample.printArray(numbers);
 
-//        ----------------------------------------------------------------------------------------
+//      ----------------------------------------------------------------------------------------
+        BubbleSortExample bubbleSortExample = new BubbleSortExample();
+
+        System.out.println("Before the bubble sort: ");
+        bubbleSortExample.printArray(numbers);
+
+        bubbleSortExample.bubbleSort(numbers);
+
+        System.out.println("\nAfter the bubble Sort: ");
+        bubbleSortExample.printArray(numbers);
+
+//      ----------------------------------------------------------------------------------------
+
     }
 
 }
