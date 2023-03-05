@@ -2,6 +2,7 @@ package com.example.sortingexamples;
 
 import com.example.sortingexamples.bubbleSortExample.BubbleSortExample;
 import com.example.sortingexamples.insertionSortExample.InsertionSortExample;
+import com.example.sortingexamples.mergerSortExample.MergerSortExample;
 import com.example.sortingexamples.quickSortExample.QuickSortExample;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -55,7 +56,17 @@ public class SortingExamplesApplication {
         bubbleSortExample.printArray(numbers);
 
 //      ----------------------------------------------------------------------------------------
+        MergerSortExample mergerSortExample = new MergerSortExample();
 
+        System.out.println("Before the merger Sort: ");
+        mergerSortExample.printArray(numbers);
+
+        mergerSortExample.mergeSort(numbers);
+
+        System.out.println("\nAfter the merge Sort: ");
+        mergerSortExample.printArray(numbers);
+
+//        ----------------------------------------------------------------------------------------
     }
 
 }
